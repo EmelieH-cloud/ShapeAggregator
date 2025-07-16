@@ -3,10 +3,19 @@ import json
 import sys
 from collections import Counter
 
-from shapes import shape_factory, Shape
+from shapes import shape_factory
 
 
 def main():
+    """
+    Entry point for the shape aggregator CLI.
+
+    Parses JSON input from a file, creates shape objects,
+    computes total area, and prints the result to stdout and area.txt.
+    Also outputs the count of each shape type.
+
+    Exits on file or JSON errors.
+    """
     parser = argparse.ArgumentParser(description="Calculate total area of shapes.")
     parser.add_argument("--file", required=True, help="Path to input JSON file.")
     args = parser.parse_args()
@@ -36,7 +45,6 @@ def main():
     with open("area.txt", "w") as f:
         f.write(formatted + "\n")
 
-    # Bonus: Print count per shape type
     shape_types = [type(shape).__name__ for shape in shapes]
     counts = Counter(shape_types)
     for shape_name, count in counts.items():

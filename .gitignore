@@ -1,0 +1,43 @@
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+dist/
+build/
+*.egg
+*.eggs/
+*.whl
+
+# Test artifacts
+.coverage
+htmlcov/
+*.log
+pytest_cache/
+.tox/
+.noseids
+
+# Packaging
+*.manifest
+*.spec
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS/macOS files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Output files
+area.txt
